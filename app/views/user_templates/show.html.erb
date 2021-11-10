@@ -1,3 +1,14 @@
+<nav>
+      <ul>
+        <li>
+          <a href="/users">Users</a>
+        </li>
+        <li>
+          <a href="/photos">Photos</a>
+        </li>
+      </ul>
+    </nav>
+
 <h1><%=@user.username%><h1>
 
 <dl>
@@ -23,7 +34,7 @@
 <% @user.own_photos.each do |photo| %>
   <tr>
     <td><img src="<%=photo.image%>"></td>
-    <td><%=photo.poster%></td>
+    <td><%=photo.poster.username%></td>
     <td><%=photo.caption%></td>
     <td><%=photo.created_at%></td>
     <td></td>
